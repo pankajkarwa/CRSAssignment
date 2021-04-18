@@ -17,6 +17,21 @@ import javax.persistence.OneToOne;
 
 
 public class Hotel {
+	
+	
+	private String name;
+    private String phoneNumber;
+    private int starRatting;
+    
+   
+    private Address address;
+
+   
+    private List<Room> rooms = new ArrayList<>();
+
+   
+    private List<Reservation> reservations = new ArrayList<>();
+
    
     public String getName() {
 		return name;
@@ -77,18 +92,6 @@ public class Hotel {
 	}
 
 
-	private String name;
-    private String phoneNumber;
-    private int starRatting;
-    
-   
-    private Address address;
-
-   
-    private List<Room> rooms = new ArrayList<>();
-
-   
-    private List<Reservation> reservations = new ArrayList<>();
-
+	
 
 }

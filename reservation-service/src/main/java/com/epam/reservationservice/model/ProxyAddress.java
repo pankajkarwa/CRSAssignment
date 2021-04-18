@@ -5,7 +5,14 @@ public class ProxyAddress {
 	
 	
 	
-	    private Long addressId;
+	    public ProxyAddress(Long addressId, String street, String area, String city) {
+		super();
+		this.addressId = addressId;
+		this.street = street;
+		this.area = area;
+		this.city = city;
+	}
+		private Long addressId;
 	    private String street;
 	    private String area;
 	    private String city;

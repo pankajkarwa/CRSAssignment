@@ -7,6 +7,16 @@ import java.util.List;
 public class ProxyHotel {
 	
 	private Long hotelId;
+	public ProxyHotel(Long hotelId, String name, String phoneNumber, int starRatting, ProxyAddress address) {
+		super();
+		this.hotelId = hotelId;
+		this.name = name;
+		this.phoneNumber = phoneNumber;
+		this.starRatting = starRatting;
+		this.address = address;
+	}
+
+
 	private String name;
     private String phoneNumber;
     private int starRatting;   

@@ -30,7 +30,7 @@ public class HotelInfoController {
 	@Autowired
 	private HotelInfoDaoService hotelInfoDaoService;
 	//@PostMapping(value = "/hotels", consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.APPLICATION_JSON_VALUE)
-	@PostMapping("/hotels")
+	@PostMapping("/addhotels")
 	public ResponseEntity<HotelInfo> addHotel(@RequestBody HotelInfo hotelInfo) {
 		HotelInfo savedInfo = hotelInfoDaoService.addNewHotel(hotelInfo);
 		
@@ -60,7 +60,7 @@ public class HotelInfoController {
         return ResponseEntity.accepted().body(reservationResult);
     }
 	
-    
+	 
   /*  public ResponseEntity<List<Reservation>> getAllReservationsByHotelId(Long hotelId){
         return ResponseEntity.ok(hotelInfoDaoService.getAllReservationsByHotelId(hotelId));
     }
@@ -71,11 +71,11 @@ public class HotelInfoController {
         List<Reservation> reservations = service.getReservationByGuestIdPerHotel(hotelId, guestId);
         return reservations;
     }
-
-    
-    public List<IHotel> getListOfHotels(List<Long> hotelIds){
-        return service.getHotels(hotelIds);
-    }*/
+*/
+	 @GetMapping(path = "/hotels")
+    public List<Hotel> getListOfHotels(List<Long> hotelIds){
+        return hotelInfoDaoService.getHotels(hotelIds);
+    }
 
 	
 	

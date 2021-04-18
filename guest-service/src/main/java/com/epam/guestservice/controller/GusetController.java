@@ -33,7 +33,7 @@ public class GusetController {
 	private GuestDaoService guestDaoService;
 	 
 
-	@GetMapping(path = "/guestTest")
+	/*@GetMapping(path = "/guestTest")
 	public String getGuest() {
 		return "Guset";
 	}
@@ -50,7 +50,7 @@ public class GusetController {
 	}
 
 	
-
+*/
 	@GetMapping(path = "/guests")
 	public List<Guest> retrievAllGuest() {
 		return guestDaoService.findAllGuest();

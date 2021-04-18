@@ -3,6 +3,7 @@
  */
 package com.epam.hotelinformationservice.services;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -12,6 +13,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.epam.hotelinformationservice.entity.Hotel;
 import com.epam.hotelinformationservice.entity.HotelInfo;
 import com.epam.hotelinformationservice.entity.Reservation;
 import com.epam.hotelinformationservice.entity.Room;
@@ -67,6 +69,18 @@ public class HotelInfoDaoService {
 	public Object getAllReservationsByHotelId(Long hotelId) {
 		
 		return null;
+	}
+
+	public List<Hotel> getHotels(List<Long> hotelIds) {
+		
+		 List<Hotel> hotels = new ArrayList();
+	        for (Long hotelId : hotelIds) {
+	            Optional<HotelInfo> hotel = hotelInfoRepository.findHotelById(hotelId);
+	            hotels.add(hotel);
+	        }
+	        return hotels;
+		
+	
 	}
 
 	

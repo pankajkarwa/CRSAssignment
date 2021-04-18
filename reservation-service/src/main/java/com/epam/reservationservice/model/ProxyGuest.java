@@ -9,13 +9,33 @@ import javax.validation.constraints.Size;
 import io.swagger.annotations.ApiModelProperty;
 */
 public class ProxyGuest {
-	 private Long guestId;
+	    private Long guestId;
 	    private String name;
-	    public Long getGuestId() {
+	    private String email;
+	    private String contactNumber;
+	    private int ratting;
+	    private List<Card> card;
+	    private List<Long> reservations =  new ArrayList<>();
+
+	    
+	    
+	    public ProxyGuest(long l, String string, String string2, String string3, int i, ArrayList arrayList) {
+			// TODO Auto-generated constructor stub
+		}
+		public Long getGuestId() {
 			return guestId;
 		}
 		public void setGuestId(Long guestId) {
 			this.guestId = guestId;
+		}
+		public ProxyGuest(Long guestId, String name, String email, String contactNumber, int ratting, List<Card> card,
+				List<Long> reservations) {
+			this.guestId = guestId;
+			this.name = name;
+			this.email = email;
+			this.contactNumber = contactNumber;
+			this.ratting = ratting;
+			this.reservations = reservations;
 		}
 		public String getName() {
 			return name;
@@ -53,12 +73,7 @@ public class ProxyGuest {
 		public void setReservations(List<Long> reservations) {
 			this.reservations = reservations;
 		}
-		private String email;
-	    private String contactNumber;
-	    private int ratting;
-	    private List<Card> card;
-	    private List<Long> reservations =  new ArrayList<>();
-	
+			
 	
 
 }

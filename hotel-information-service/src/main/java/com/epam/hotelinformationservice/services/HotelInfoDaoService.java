@@ -4,6 +4,7 @@
 package com.epam.hotelinformationservice.services;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -76,7 +77,7 @@ public class HotelInfoDaoService {
 		 List<Hotel> hotels = new ArrayList();
 	        for (Long hotelId : hotelIds) {
 	            Optional<HotelInfo> hotel = hotelInfoRepository.findHotelById(hotelId);
-	            hotels.add(hotel);
+	            hotels.addAll((Collection<? extends Hotel>) hotel.get());
 	        }
 	        return hotels;
 		

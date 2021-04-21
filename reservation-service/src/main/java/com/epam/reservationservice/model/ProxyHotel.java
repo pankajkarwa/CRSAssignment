@@ -66,6 +66,12 @@ public class ProxyHotel {
 	}
 
 
+	public Object getHotelId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 	/*
 	 * public List<Room> getRooms() { return rooms; }
 	 * 
